@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Metro Quadrado</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Metro²</h1>
+        <div class="calculator">
+            <label for="valorMetroQuadrado">Valor do Metro² (R$):</label>
+            <input type="text" id="valorMetroQuadrado" placeholder="Valor do metro quadrado">
+
+            <div id="dimensoes-container">
+                <div class="dimensao" data-id="1">
+                    <h2>Área 1</h2>
+                    <label>Largura (m):</label>
+                    <input type="number" class="largura" placeholder="Largura em metros">
+                    <label>Comprimento (m):</label>
+                    <input type="number" class="comprimento" placeholder="Comprimento em metros">
+                    <button class="remove-dimensao" onclick="removerDimensao(1)">Remover</button>
+                </div>
+            </div>
+
+            <button id="add-dimensao">+</button>
+            <button onclick="calcular()">Calcular</button>
+
+            <div id="resultados"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
